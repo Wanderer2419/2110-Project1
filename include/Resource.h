@@ -2,27 +2,23 @@
 #ifndef RESOURCE_H
 #define RESOURCE_H
 #include <string>
+#include <vector>
 
 class Resource {
     private:
-        int Resource_ID;
+        std::string Resource_ID;
         std::string Resource_Name;
         std::string Resource_Type;
-        bool Status;
+        std::string Status;
     public:
         // Constructor
-        Resource(int ID, std::string name, std::string type, bool status);
+        Resource(std::string ID, std::string name, std::string type, std::string status);
 
-        int getResourceID();
+        std::string getResourceID();
 
         std::string getResourceName();
 
         std::string getResourceType();
-        bool getAvailabilityStatus();
-
-        void displayResource();
-        void displayAvailability();
-        std::string Search_Resources();
-        
+        std::string getAvailabilityStatus();        
 };
 #endif
