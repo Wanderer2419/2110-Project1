@@ -9,7 +9,7 @@
 
 void loadResources();
 void displayAllResources();
-void SearchByID();
+void SearchResources();
 
 
 #endif
