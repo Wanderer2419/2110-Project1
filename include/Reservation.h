@@ -3,7 +3,6 @@
 #ifndef RESERVATION_H
 #define RESERVATION_H
 #include <string>
-#include <vector>
 using namespace std
 
 class Reservation {
@@ -15,7 +14,7 @@ class Reservation {
 		string Reservation_Date
     public:
         // Constructor
-        Reservation(string ResrvationID, string StudentID, string name, string ResourceID, string date);
+        Reservation(string ReservationID, string StudentID, string name, string ResourceID, string date);
 
         string getReservationID();
 		string getStudentID();
