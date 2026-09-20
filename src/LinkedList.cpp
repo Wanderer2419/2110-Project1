@@ -32,7 +32,7 @@ void LinkedList::pushFront(Reservation res) {
 	newNode->next = head;
 	head = newNode;
 }
-void LinkedList::pushBack(Reservation res) {
+void LinkedList::PushBack(Reservation res) {
 	Node* newNode = new Node(res);
 	if (head == nullptr) {
 		head = newNode;
