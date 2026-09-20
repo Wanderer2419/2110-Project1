@@ -8,7 +8,7 @@ Reservation::Reservation(string ReservationID, string StudentID, string name, st
 	Reservation_ID = ReservationID;
 	Student_ID = StudentID;
 	Student_Name = name;
-	Resource_ID = ResourceID
+	Resource_ID = ResourceID;
 	Reservation_Date = date;
 }
 
