@@ -11,7 +11,7 @@ class Reservation {
         string Student_ID;
         string Student_Name;
         string Resource_ID;
-		string Reservation_Date
+		string Reservation_Date;
     public:
         // Constructor
         Reservation(string ReservationID, string StudentID, string name, string ResourceID, string date);
