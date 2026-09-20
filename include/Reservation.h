@@ -15,12 +15,15 @@ class Reservation {
 		string Reservation_Date
     public:
         // Constructor
-        Reservation(string RID, string SID, string name, string ResourceID, string date);
+        Reservation(string ResrvationID, string StudentID, string name, string ResourceID, string date);
 
         string getReservationID();
 		string getStudentID();
         string getStudentName();
         string getResourceID();
         string getReservationDate();
+
+		// Display reservations
+		void DisplayReservation();
 };
 #endif
