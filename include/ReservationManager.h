@@ -27,5 +27,4 @@ void generateReport(LinkedList& active, WaitingList& waiting, CancellationHistor
 
 
 #endif
-#endif
 
