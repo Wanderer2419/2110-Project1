@@ -7,10 +7,8 @@
 using namespace std;
 
 // Node struct
-Node::Node(Reservation res) {
-	ResData = res;
-	resID = res.getReservationID();
-	next = nullptr;
+Node::Node(Reservation res)
+    : resID(res.getReservationID()), resData(res), next(nullptr) {
 }
 
 // Linked List class
