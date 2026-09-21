@@ -24,7 +24,13 @@ int main() {
     std::cout << "7.Sort Resources" << std::endl;
     std::cout << "8.Generate Report" << std::endl;
     std::cout << "9.Exit" << std::endl;
+    LinkedList active;             
+    WaitingList waiting;           
+    CancellationHistory history;   
+    int nextID = 301;             
+
     loadResources();
+    loadReservations(active, nextID);
 
     int choice = 0;
     while(choice != 9) {
@@ -36,26 +42,26 @@ int main() {
             displayAllResources();
             break;
         case 2:
-            std::cout << "Need to work" << std::endl;
+            createReservation(active, waiting, nextID);
             break;
         case 3:
-            std::cout << "Need to work" << std::endl;
+             cancelReservation(active, waiting, history, nextID);
             break;
         case 4:
-            std::cout << "Need to work" << std::endl;
+            waiting.displayAll();
             break;
         case 5:
-            std::cout << "Need to work" << std::endl;
+            undoCancellation(active, history);
             break;
         case 6:
             
             SearchResources();
             break;
         case 7:
-            std::cout << "Need to work" << std::endl;
+            sortResources();
             break;
         case 8:
-            std::cout << "Need to work" << std::endl;
+            generateReport(active, waiting, history);
             break;
         case 9:
             std::cout << "Exit" << std::endl;
