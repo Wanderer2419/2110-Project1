@@ -7,7 +7,7 @@
 
 
 struct WaitRequest {
-    int studentID = 0;
+    std::string studentID;
     std::string studentName;
     std::string resourceID;
     std::string date;
