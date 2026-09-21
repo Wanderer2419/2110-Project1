@@ -121,3 +121,26 @@ void LinkedList::search(string ID) {
 	cout << "\tResource ID = " << current->resData.getResourceID() << endl;
 	cout << "\tReservation Date = " << current->resData.getReservationDate() << endl;
 }
+
+// Find a reservation by ID and return a pointer to it (nullptr if not found)
+Reservation* LinkedList::find(const string& ID) {
+	Node* current = head;
+	while (current != nullptr) {
+		if (current->resID == ID) {
+			return &current->resData;
+		}
+		current = current->next;
+	}
+	return nullptr;
+}
+
+// Copy all reservations into a vector, in list order
+vector<Reservation> LinkedList::toVector() {
+	vector<Reservation> all;
+	Node* current = head;
+	while (current != nullptr) {
+		all.push_back(current->resData);
+		current = current->next;
+	}
+	return all;
+}
