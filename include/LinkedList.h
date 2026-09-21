@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include "Reservation.h"
+#include <vector>
 using namespace std;
 
 // Node structure for storing reservations
@@ -32,4 +33,8 @@ class LinkedList {
 	// Might need to change return type:
 		void remove(string ID);	// Remove a node based on its reservation id
 		void search(string ID);	// Search for a reservation
+		Reservation* find(const string& ID);   // pointer to the stored reservation, or nullptr
+		vector<Reservation> toVector();        // copy of every reservation, front to back
 };
+
+#endif
