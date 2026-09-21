@@ -1,4 +1,6 @@
 // Reservation Linked List header file
+#ifndef LINKED_LIST_H
+#define LINKED_LIST_H
 #include <iostream>
 #include <string>
 #include "Reservation.h"
