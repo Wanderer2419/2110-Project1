@@ -5,7 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-
+using namespace std;
 std::vector<Resource> res; 
 
 void loadResources() {
