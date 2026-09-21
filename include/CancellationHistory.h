@@ -10,7 +10,6 @@ class CancellationHistory {
 public:
     void push(const Reservation& r);
 
-  .
     bool pop(Reservation& out);
 
     bool isEmpty() const;
