@@ -1,7 +1,6 @@
 // Reservation Linked List implementation
 #include "LinkedList.h"
 #include "Reservation.h"
-#include "ReservationManager.h"
 #include <iostream>
 
 using namespace std;
