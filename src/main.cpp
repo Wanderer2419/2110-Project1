@@ -5,6 +5,8 @@
 #include "Reservation.h"
 #include <fstream>
 #include <string>
+#include <limits>
+using namespace std;
 
 int main() {
     // Front
@@ -19,7 +21,7 @@ int main() {
     std::cout << "7.Sort Resources" << std::endl;
     std::cout << "8.Generate Report" << std::endl;
     std::cout << "9.Exit" << std::endl;
-
+    loadResources();
 
     int choice = 0;
     while(choice != 9) {
@@ -27,7 +29,7 @@ int main() {
         std::cin >> choice;
         switch(choice) {
         case 1:
-            loadResources();
+            
             displayAllResources();
             break;
         case 2:
@@ -43,7 +45,7 @@ int main() {
             std::cout << "Need to work" << std::endl;
             break;
         case 6:
-            loadResources();
+            
             SearchResources();
             break;
         case 7:
