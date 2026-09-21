@@ -6,6 +6,8 @@
 
 using namespace std;
 
+
+
 // Node struct
 Node::Node(Reservation res)
     : resID(res.getReservationID()), resData(res), next(nullptr) {
@@ -45,9 +47,13 @@ void LinkedList::PushBack(Reservation res) {
 
 // Display function
 void LinkedList::display() {
+	if (head == nullptr) {
+		cout << "No active reservations." << endl;
+		return;
+	}
 	Node* temp = head;
 	while (temp != nullptr) {
-		cout << temp->data << " -> ";
+		temp->resData.DisplayReservation();
 		temp = temp->next;
 	}
 }
@@ -58,7 +64,7 @@ void LinkedList::display() {
 void LinkedList::remove(string ID) {
 	// Check if the list is empty:
 	if (head == nullptr) {
-		cout << "Error: The list is empty"
+		cout << "Error: The list is empty" << endl;
 		return;
 	}
 
@@ -80,11 +86,11 @@ void LinkedList::remove(string ID) {
 	}
 	// No corresponding ID value found:
 	if (current == nullptr) {
-		cout << "Error: ID " << ID << " not found in the list"
+		cout << "Error: ID " << ID << " not found in the list" << endl;
 		return;
 	}
 	// Found ID value:
-	previou->next = current->next;
+	previous->next = current->next;
 	delete current;
 }
 
@@ -92,7 +98,7 @@ void LinkedList::remove(string ID) {
 void LinkedList::search(string ID) {
 	// Check if the list is empty:
 	if (head == nullptr) {
-		cout << "Error: The list is empty"
+		cout << "Error: The list is empty" << endl;
 		return;
 	}
 
@@ -104,7 +110,7 @@ void LinkedList::search(string ID) {
 	}
 	// No corresponding ID value found:
 	if (current == nullptr) {
-		cout << "Error: ID " << ID << " not found in the list"
+		cout << "Error: ID " << ID << " not found in the list" << endl;
 		return;
 	}
 	// Found ID value:
