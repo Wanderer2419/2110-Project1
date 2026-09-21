@@ -5,6 +5,9 @@
 #include "Reservation.h"
 #include <fstream>
 #include <string>
+#include "LinkedList.h"
+#include "WaitingList.h"
+#include "CancellationHistory.h"
 #include <limits>
 using namespace std;
 
