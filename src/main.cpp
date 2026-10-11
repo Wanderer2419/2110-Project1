@@ -14,16 +14,6 @@ using namespace std;
 int main() {
     // Front
 
-    std::cout << "===== Campus Resource Reservation System =====" << std::endl;
-    std::cout << "1.View Resources" << std::endl;
-    std::cout << "2.Create Reservation" << std::endl;
-    std::cout << "3.Cancel Reservation" << std::endl;
-    std::cout << "4.View Waiting Lists" << std::endl;
-    std::cout << "5.Undo Cancellation" << std::endl;
-    std::cout << "6.Search Reservations" << std::endl;
-    std::cout << "7.Sort Resources" << std::endl;
-    std::cout << "8.Generate Report" << std::endl;
-    std::cout << "9.Exit" << std::endl;
     LinkedList active;             
     WaitingList waiting;           
     CancellationHistory history;   
@@ -34,6 +24,16 @@ int main() {
 
     int choice = 0;
     while(choice != 9) {
+        std::cout << "===== Campus Resource Reservation System =====" << std::endl;
+        std::cout << "1.View Resources" << std::endl;
+        std::cout << "2.Create Reservation" << std::endl;
+        std::cout << "3.Cancel Reservation" << std::endl;
+        std::cout << "4.View Waiting Lists" << std::endl;
+        std::cout << "5.Undo Cancellation" << std::endl;
+        std::cout << "6.Search Reservations" << std::endl;
+        std::cout << "7.Sort Resources" << std::endl;
+        std::cout << "8.Generate Report" << std::endl;
+        std::cout << "9.Exit" << std::endl;
         std::cout << "Enter your choice: ";
         std::cin >> choice;
         switch(choice) {
@@ -55,7 +55,7 @@ int main() {
             break;
         case 6:
             
-            SearchResources();
+            SearchResources(active);
             break;
         case 7:
             sortResources();
