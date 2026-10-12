@@ -24,6 +24,7 @@ int main() {
 
     int choice = 0;
     while(choice != 9) {
+        std::cout << "\n\n";
         std::cout << "===== Campus Resource Reservation System =====" << std::endl;
         std::cout << "1.View Resources" << std::endl;
         std::cout << "2.Create Reservation" << std::endl;
@@ -36,16 +37,17 @@ int main() {
         std::cout << "9.Exit" << std::endl;
         std::cout << "Enter your choice: ";
         std::cin >> choice;
+        std::cout << "\n\n";
+        
         switch(choice) {
         case 1:
-            
             displayAllResources();
             break;
         case 2:
             createReservation(active, waiting, nextID);
             break;
         case 3:
-             cancelReservation(active, waiting, history, nextID);
+            cancelReservation(active, waiting, history, nextID);
             break;
         case 4:
             waiting.displayAll();
@@ -54,7 +56,6 @@ int main() {
             undoCancellation(active, history);
             break;
         case 6:
-            
             SearchResources(active);
             break;
         case 7:
@@ -67,7 +68,7 @@ int main() {
             std::cout << "Exit" << std::endl;
             break;
         default:
-            std::cout << "Not in option" << std::endl;
+            std::cout << "Not an option" << std::endl;
             break;
         }
     }
