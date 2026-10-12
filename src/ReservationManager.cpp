@@ -189,8 +189,9 @@ void createReservation(LinkedList& active, WaitingList& waiting, int& nextID) {
         return;
     }
 
-    active.PushBack(Reservation(to_string(nextID++), sid, name, rid, date));
-    cout << "Reservation created." << endl;
+    int x = nextID++;
+    active.PushBack(Reservation(to_string(x), sid, name, rid, date));
+    cout << "Reservation created.\nYour reservation ID number is: " << x << endl;
 }
 
 void cancelReservation(LinkedList& active, WaitingList& waiting,
