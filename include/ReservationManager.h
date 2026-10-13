@@ -15,7 +15,7 @@ using namespace std;
 
 void loadResources();
 void displayAllResources();
-void SearchResources();
+void SearchResources(LinkedList& active);
 
 void loadReservations(LinkedList& active, int& nextID);
 void createReservation(LinkedList& active, WaitingList& waiting, int& nextID);

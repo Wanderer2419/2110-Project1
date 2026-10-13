@@ -31,5 +31,7 @@ string Reservation::getReservationDate() {
 // Display Reservation function
 void Reservation::DisplayReservation() {
 	//301|1001|Alice Smith|R101|09/15/2026
-	cout << Reservation_ID << "|" << Student_ID << "|" << Student_Name << "|" << Resource_ID << "|" << Reservation_Date << endl;
+	cout << "Reservation ID: " << Reservation_ID << "|" << "Student ID: " << Student_ID << "|" 
+	     << "Student Name: " << Student_Name << "|" << "Resources ID: " << Resource_ID 
+		 << "|" << "Reservation Date: " << Reservation_Date << endl;
 }

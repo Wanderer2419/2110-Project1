@@ -34,6 +34,7 @@ class LinkedList {
 		void remove(string ID);	// Remove a node based on its reservation id
 		void search(string ID);	// Search for a reservation
 		Reservation* find(const string& ID);   // pointer to the stored reservation, or nullptr
+		void searchByName(const string& name); // pointer to the stored name
 		vector<Reservation> toVector();        // copy of every reservation, front to back
 };
 

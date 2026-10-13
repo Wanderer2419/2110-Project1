@@ -133,6 +133,24 @@ Reservation* LinkedList::find(const string& ID) {
 	return nullptr;
 }
 
+// Find a reervation by Name and return a pointer to it(nullptr is not found)
+void LinkedList::searchByName(const string& name) {
+    Node* current = head;
+    bool found = false;
+
+    while (current != nullptr) {
+        if (current->resData.getStudentName() == name) {
+            current->resData.DisplayReservation();
+            found = true;
+        }
+
+        current = current->next;
+    }
+
+    if (!found) {
+        cout << "No reservations found for this student." << endl;
+    }
+}
 // Copy all reservations into a vector, in list order
 vector<Reservation> LinkedList::toVector() {
 	vector<Reservation> all;

@@ -14,16 +14,6 @@ using namespace std;
 int main() {
     // Front
 
-    std::cout << "===== Campus Resource Reservation System =====" << std::endl;
-    std::cout << "1.View Resources" << std::endl;
-    std::cout << "2.Create Reservation" << std::endl;
-    std::cout << "3.Cancel Reservation" << std::endl;
-    std::cout << "4.View Waiting Lists" << std::endl;
-    std::cout << "5.Undo Cancellation" << std::endl;
-    std::cout << "6.Search Reservations" << std::endl;
-    std::cout << "7.Sort Resources" << std::endl;
-    std::cout << "8.Generate Report" << std::endl;
-    std::cout << "9.Exit" << std::endl;
     LinkedList active;             
     WaitingList waiting;           
     CancellationHistory history;   
@@ -34,18 +24,30 @@ int main() {
 
     int choice = 0;
     while(choice != 9) {
+        std::cout << "\n\n";
+        std::cout << "===== Campus Resource Reservation System =====" << std::endl;
+        std::cout << "1.View Resources" << std::endl;
+        std::cout << "2.Create Reservation" << std::endl;
+        std::cout << "3.Cancel Reservation" << std::endl;
+        std::cout << "4.View Waiting Lists" << std::endl;
+        std::cout << "5.Undo Cancellation" << std::endl;
+        std::cout << "6.Search Reservations" << std::endl;
+        std::cout << "7.Sort Resources" << std::endl;
+        std::cout << "8.Generate Report" << std::endl;
+        std::cout << "9.Exit" << std::endl;
         std::cout << "Enter your choice: ";
         std::cin >> choice;
+        std::cout << "\n\n";
+        
         switch(choice) {
         case 1:
-            
             displayAllResources();
             break;
         case 2:
             createReservation(active, waiting, nextID);
             break;
         case 3:
-             cancelReservation(active, waiting, history, nextID);
+            cancelReservation(active, waiting, history, nextID);
             break;
         case 4:
             waiting.displayAll();
@@ -54,8 +56,7 @@ int main() {
             undoCancellation(active, history);
             break;
         case 6:
-            
-            SearchResources();
+            SearchResources(active);
             break;
         case 7:
             sortResources();
@@ -67,7 +68,7 @@ int main() {
             std::cout << "Exit" << std::endl;
             break;
         default:
-            std::cout << "Not in option" << std::endl;
+            std::cout << "Not an option" << std::endl;
             break;
         }
     }
